@@ -1,0 +1,10 @@
+@import '../../../../config-scss/func.scss';
+
+:host{
+  .pokemon{
+    display: flex;
+    width: 49%;
+    padding: Size-rem(20);
+    background: var(--branco);
+    border-radius: Size-rem(10);
+}}

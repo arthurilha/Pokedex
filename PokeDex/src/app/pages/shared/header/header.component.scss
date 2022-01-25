@@ -1,0 +1,10 @@
+@import '../../../../config-scss/func.scss';
+ 
+:host{
+  header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: Size-rem(40) 0;
+  }
+}
