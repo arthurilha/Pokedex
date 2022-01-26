@@ -1,0 +1,119 @@
+@import '../../../config-scss/func.scss';
+
+:host {
+	main {
+		margin-top: Size-rem(40);
+
+		.pokemon__names {
+			position: relative;
+			display: flex;
+			align-items: flex-end;
+			justify-content: flex-end;
+
+			height: 75px;
+
+			padding: 0 Size-rem(30);
+
+			h1 {
+				color: var(--branco);
+				font-size: Size-rem(32);
+				text-transform: capitalize;
+			}
+
+			h2 {
+				position: absolute;
+				font-weight: 100;
+				top: 0;
+				font-size: Size-rem(60);
+				color: rgba(255, 255, 255, 0.1);
+			}
+
+			h1,
+			h2 {
+				//Remove Bug Animation
+				-webkit-animation-fill-mode: none !important;
+				animation-fill-mode: none !important;
+			}
+		}
+
+		.pokemon__status {
+			position: relative;
+
+			img {
+				position: absolute;
+				top: Size-rem(-90);
+				left: Size-rem(30);
+				max-width: Size-rem(130);
+				z-index: 10;
+
+				//Remove Bug Animation
+				-webkit-animation-fill-mode: none !important;
+				animation-fill-mode: none !important;
+			}
+
+			&__statistics {
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+
+				background: var(--branco);
+
+				min-height: 43.9vh;
+				margin-top: Size-rem(10);
+
+				padding: Size-rem(110) Size-rem(35) Size-rem(30);
+				border-radius: Size-rem(50) Size-rem(50) 0 0;
+
+				h3 {
+					margin-bottom: Size-rem(20);
+					font-weight: 700;
+					font-style: italic;
+					font-size: Size-rem(32);
+					text-decoration: underline;
+					color: var(--secondary-color);
+				}
+
+				ol {
+					li {
+						display: flex;
+						justify-content: space-between;
+
+						font-size: Size-rem(18);
+						line-height: 130%;
+					}
+				}
+			}
+		}
+
+		@media (max-width: 420px) {
+			margin-top: Size-rem(10);
+
+			.pokemon__names {
+				h1 {
+					font-size: Size-rem(20);
+				}
+
+				h2 {
+					top: Size-rem(35);
+					font-size: Size-rem(20);
+				}
+			}
+
+			.pokemon__status {
+				position: relative;
+
+				img {
+					position: absolute;
+					top: Size-rem(-80);
+					left: Size-rem(0);
+					max-width: Size-rem(100);
+				}
+
+				&__statistics {
+					min-height: 57vh;
+					padding-top: Size-rem(50);
+				}
+			}
+		}
+	}
+}

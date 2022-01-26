@@ -5,6 +5,7 @@ import { CommonModule } from '@angular/common';
 import { HeaderComponent } from './header/header.component';
 import { SearchComponent } from './search/search.component';
 import { ListComponent } from './list/list.component';
+import { RouterModule } from '@angular/router';
 
 
 
@@ -21,7 +22,8 @@ import { ListComponent } from './list/list.component';
   ],
 
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ]
 })
 export class SharedModule { }

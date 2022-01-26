@@ -8,12 +8,25 @@ import { ApiService } from 'src/app/service/api.service';
 })
 export class ListComponent implements OnInit {
 
+  public getPokemons : any;
+  private setPokemons : any;
+
   constructor( private api : ApiService) { }
 
   ngOnInit(): void {
     this.api.apiListPokemond.subscribe(
-      res => console.log(res)
+      res => {
+        this.setPokemons = res.results
+        this.getPokemons = this.setPokemons
+      }
     )
+  }
+
+  public getSearch(value:string){
+    const filter = this.setPokemons.filter( (res: any ) =>{
+      return !res.name.indexOf(value.toLowerCase())
+    }) 
+    this.getPokemons = filter
   }
 
 }
