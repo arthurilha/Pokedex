@@ -1,10 +1,64 @@
 @import '../../../../config-scss/func.scss';
 
 :host{
+
+  display: flex;
+  justify-content: space-between;
+
+  padding: Size-rem(20) 0;
+
   .pokemon{
+    position: relative;
     display: flex;
-    width: 49%;
-    padding: Size-rem(20);
+    width: calc(49% - 2.5rem);
+    height: Size-rem(117);
+    padding: Size-rem(15);
     background: var(--branco);
     border-radius: Size-rem(10);
+
+    &__status{
+      h2{
+        font-size: Size-rem(22);
+        font-style: italic;
+        font-weight: 700;
+
+        margin-bottom: Size-rem(10);
+      }
+      ul{
+        display: flex;
+        flex-direction: column;
+        
+        li{
+          background: var(--cinza);
+          font-size: Size-rem(15);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+
+          border-radius: Size-rem(50);
+          width: Size-rem(60);
+          margin-bottom: Size-rem(5);
+        }
+      }
+    }
+
+    &__image{
+      position: absolute;
+      bottom: Size-rem(20);
+      right: Size-rem(20);
+      height: Size-rem(90);
+      width: Size-rem(110);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      
+
+      background: url('../../../../assets/card/Bolinhas.png');
+
+      img{
+        width: Size-rem(80);
+
+      }
+    }
+
 }}

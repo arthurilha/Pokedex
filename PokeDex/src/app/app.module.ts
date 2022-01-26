@@ -6,7 +6,6 @@ import { AppComponent } from './app.component';
 
 //modules
 import { PagesModule } from './pages/pages.module';
-
 //components
 
 @NgModule({
@@ -16,7 +15,8 @@ import { PagesModule } from './pages/pages.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    PagesModule
+    PagesModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

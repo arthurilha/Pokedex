@@ -9,6 +9,7 @@ import { SharedModule } from './shared/shared.module';
 import { HomeComponent } from './home/home.component';
 import { DetailsComponent } from './details/details.component';
 
+import {HttpClientModule} from '@angular/common/http'
 
 
 
@@ -23,7 +24,8 @@ import { DetailsComponent } from './details/details.component';
   imports: [
     CommonModule,
     RoutingModule,
-    SharedModule
+    SharedModule,
+    HttpClientModule
   ]
 })
 export class PagesModule { }
